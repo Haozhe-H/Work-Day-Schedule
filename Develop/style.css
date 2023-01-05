@@ -12,6 +12,11 @@ textarea {
   padding: 10px;
 }
 
+.hero{
+  background-color: #77dd77;
+  text-align: center;
+}
+
 .description {
   white-space: pre-wrap;
 }
