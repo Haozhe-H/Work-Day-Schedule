@@ -5,6 +5,8 @@
 var Now = dayjs().format('MMM D YYYY, h:mm:ss a');
 $("#currentDay").html(Now);
 // console.log(displayDate);
+var NowHour = dayjs().format("HH");
+// console.log(NowHour);
 
 $("#clearBtn").click(function(events){
   events.preventDefault;
@@ -15,9 +17,17 @@ $("#clearBtn").click(function(events){
 
 $(document).ready(function () {
 
-  $(".time-block").each(function){
-    
-  }
+  $(".time-block").each(function(){
+    var timeInt = $(this).attr("id").split("-")[1];
+
+    if(NowHour == timeInt){
+      $(this).removeClass("past future").addClass("present");
+    }else if(NowHour < timeInt){
+      $(this).removeClass("present future").addClass("past");
+    }else if(NowHour > timeInt){
+      $(this).removeClass("past present").addClass("future");
+    }
+  })
 
 
 
@@ -42,5 +52,5 @@ $(document).ready(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+
 });
