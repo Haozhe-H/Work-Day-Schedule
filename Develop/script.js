@@ -6,7 +6,6 @@ var Now = dayjs().format('MMM D YYYY, h:mm:ss a');
 $("#currentDay").html(Now);
 // console.log(displayDate);
 var NowHour = dayjs().format("HH");
-console.log(NowHour);
 
 $("#clearBtn").click(function(events){
   events.preventDefault();
@@ -25,7 +24,7 @@ $(document).ready(function () {
   })
 
   $(".time-block").each(function(){
-    var timeInt = $(this).attr("id").split("hour-")[1];
+    var timeInt = $(this).attr("id").split("-")[1];
 
     if(NowHour == timeInt){
       $(this).removeClass("past future").addClass("present");
