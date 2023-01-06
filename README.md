@@ -11,7 +11,7 @@ N/A
 ## Usage
 
 To use this scheduler, you can type activies in the time slot and click the save button on the rightside of each time slot, if you want to refresh the page and re-enter you can click the CLEAR button in the middle, shown in image below:
-![page screenshot](assets/screenshot.JPG)
+![page screenshot](Assets/screenshot.JPG)
 
 This will clear all the acticities and local storage.
 
